@@ -1,6 +1,11 @@
 # Development tools files.
 *.vim
 *.gdb
+build/build
+build/*.exe
+build/magpie.h
+test
+test.exe
 
 # Prerequisites
 *.d
