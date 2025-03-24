@@ -1,3 +1,7 @@
+# Development tools files.
+*.vim
+*.gdb
+
 # Prerequisites
 *.d
 
