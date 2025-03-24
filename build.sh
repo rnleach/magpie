@@ -22,7 +22,7 @@ if [ "$#" -gt 0 -a "$1" = "clean" ]
 then
     echo "clean compiled programs"
     echo
-    rm test $BUILD_SCRIPT_DIR/build $BUILD_SCRIPT_DIR/*.h
+    rm test $BUILD_SCRIPT_DIR/build $BUILD_SCRIPT_DIR/magpie.h
 else
     cd $BUILD_SCRIPT_DIR
     cc build.c -o build

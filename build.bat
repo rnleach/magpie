@@ -36,7 +36,7 @@ rem
 :Clean
 @echo "Clean"
 del *.exe *.obj *.pdb *.ilk 
-del build\*.exe build\*.obj build\*.pdb build\*.ilk build\*.h
+del build\*.exe build\*.obj build\*.pdb build\*.ilk build\magpie.h
 GOTO EndSuccess
 
 rem
