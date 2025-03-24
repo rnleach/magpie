@@ -141,12 +141,6 @@ static inline void mag_sys_memory_free(MagMemoryBlock *mem);
 #error "Platform not supported by Coyote Library"
 #endif
 
-#if defined(__linux__) || defined(__APPLE__)
-
-#include "magpie_linux_apple_common.h"
-
-#endif
-
 #pragma warning(pop)
 
 #endif

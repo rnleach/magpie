@@ -42,8 +42,6 @@ main(int argc, char *argv[])
     size ap_size = 0;
     char linux_buffer[COY_KiB(20)] = {0};
     size li_size = 0;
-    char common_buffer[COY_KiB(100)] = {0};
-    size co_size = 0;
 
     char finished_lib[COY_KiB(350)] = {0};
 
@@ -62,10 +60,6 @@ main(int argc, char *argv[])
 
     char const *fname_linux = "../src/magpie_linux.h";
     success = load_file(fname_linux, sizeof(linux_buffer), linux_buffer, &li_size);
-    StopIf(!success, return 1);
-
-    char const *fname_common = "../src/magpie_linux_apple_common.h";
-    success = load_file(fname_common, sizeof(common_buffer), common_buffer, &co_size);
     StopIf(!success, return 1);
 
     // Merge them in a buffer
@@ -96,13 +90,6 @@ main(int argc, char *argv[])
 		insert_buffer(sizeof(finished_lib), &oi, finished_lib, insert_marker - c, c);
 		insert_buffer(sizeof(finished_lib), &oi, finished_lib, ap_size, apple_buffer);
 		insert_marker += 29;
-		c = insert_marker;
-	  }
-	  else if(str_eq("#include \"magpie_linux_apple_common.h\"", insert_marker, 38))
-	  {
-		insert_buffer(sizeof(finished_lib), &oi, finished_lib, insert_marker - c, c);
-		insert_buffer(sizeof(finished_lib), &oi, finished_lib, co_size, common_buffer);
-		insert_marker += 38;
 		c = insert_marker;
 	  }
 	  else
