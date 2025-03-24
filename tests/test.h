@@ -12,6 +12,6 @@
 #include <stdio.h>
 #include "../build/magpie.h"
 
-void magpie_memory_tests(void);
+void magpie_sys_memory_tests(void);
 
 #endif

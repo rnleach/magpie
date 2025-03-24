@@ -12,8 +12,8 @@ main(int argc, char *argv[])
 {
     fprintf(stderr, "\n\n***        Starting Tests.        ***\n\n");
 
-    fprintf(stderr, "magpie_memory_tests()..");
-    magpie_memory_tests();
+    fprintf(stderr, "magpie_sys_memory_tests()..");
+    magpie_sys_memory_tests();
     fprintf(stderr, ".complete.\n");
 
     fprintf(stderr, "\n\n*** Tests completed successfully. ***\n\n");
@@ -21,5 +21,5 @@ main(int argc, char *argv[])
     return EXIT_SUCCESS;
 }
 
-#include "memory.c"
+#include "sys_memory.c"
 

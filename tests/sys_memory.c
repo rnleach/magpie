@@ -48,7 +48,7 @@ test_allocate_free(void)
  *                                                     All file Memory
  *-------------------------------------------------------------------------------------------------------------------------*/
 void
-magpie_memory_tests(void)
+magpie_sys_memory_tests(void)
 {
     test_allocate_free();
 }
