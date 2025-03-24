@@ -2016,6 +2016,7 @@ coy_profile_read_os_page_fault_count(void)
 // Apple / BSD specific implementation goes here - things NOT in common with Linux
 #include <sys/mman.h>
 #include <sys/resource.h>
+#include <sys/syslimits.h>
 #include <unistd.h>
 
 /* The reason for a seperate Linux and Apple impelementation is on Linux I can use the MAP_POPULATE flag, but I cannot on 
